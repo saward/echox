@@ -16,6 +16,7 @@ type (
 )
 
 var (
+	// NOTE: This is not safe to use in production, with concurrent access without mutexes or channels
 	users = map[int]*user{}
 	seq   = 1
 )
